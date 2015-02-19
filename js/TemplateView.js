@@ -17,15 +17,15 @@
             return x;
         },
         loadTemplate: function(name) {
-            return this.stream('./templates/' + name + '.html');
+            return this.stream('./templates/' + name + '.tmpl');
         },
         initialize: function(options) {
             this.options = options;
-
             this.model && this.model.on("change", this.render.bind(this));
             this.collection && this.collection.on("add reset remove", this.render.bind(this));
         },
         render: function() {
+
             var self = this;
             this.loadTemplate(this.options.view || this.view).then(function(fn) {
                 var d = self.model || self.collection;
