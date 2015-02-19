@@ -1,18 +1,18 @@
 
-  
+
     <form>
-      <div class="input-holder">
-        <input type="text" placeholder="todo">
-          
+      <div class="search-holder">
+        <input id="mysearch" type="search" placeholder="search">
+
       </div>
       <div class="button-holder">
         <button class="add">+</button>
-      </div> 
+      </div>
           <div class="editor hidden">
            <hr>
             <div class="editor-inputs input-holder">
-              <input type="text" name="name" placeholder="name"> 
-              <input type="text" name="dueBy" placeholder="due by"> 
+              <input type="text" name="name" placeholder="name">
+              <input type="date"/>
               <input type="text" name="description" placeholder="description">
             </div>
             <div class="editor-controls button-holder">
@@ -29,7 +29,7 @@
 
            <div>
              Event name:<%=c.name%>
-          
+
               </div>
               <div>
               Date created:<%=c.date%>
@@ -42,7 +42,7 @@
               <div>
               Date due:<%=c.dueBy%>
               </div>
-        </div>   
+        </div>
         <hr>
       <%})%>
     </form>
